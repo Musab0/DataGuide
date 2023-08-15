@@ -1,5 +1,6 @@
-Welcome to Lumache's documentation!
+BEST PRACTICES FOR DATA MANAGEMENT ARTIFICIAL INTELLIGENCE APPLICATIONS
 ===================================
+NATIONAL PROGRAM FOR ARTIFICIAL INTELLIGENCE
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
 that creates recipes mixing random ingredients.
