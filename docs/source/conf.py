@@ -2,11 +2,11 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Data Guide'
+copyright = '2023, AI Office'
+author = 'AI Office'
 
-release = '0.1'
+release = '1.0'
 version = '0.1.0'
 
 
