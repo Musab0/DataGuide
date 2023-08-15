@@ -1,4 +1,4 @@
-Usage
+1	INTRODUCTION
 =====
 
 .. _installation:
