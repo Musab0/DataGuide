@@ -1,9 +1,7 @@
-Template for the Read the Docs tutorial
+Data Guide
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This is the live document of the Data Guide published by the Office of Artificial Intelligence in the UAE. This version is continuously updated to cover the evolving topics related to the best practices for data management in AI applications. 
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+Download the PDF version in English and Arabic at: 
+https://ai.gov.ae/publications
