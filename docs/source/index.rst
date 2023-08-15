@@ -18,11 +18,9 @@ Contents
 --------
 
 .. toctree::
-   :caption: Table of Contents
-   :maxdepth: 2
 
    Forward
-   Introduction/index
+   Introduction
    Introduction/Types of Data
    Introduction/The AI-Ml Life Cycle
    Introduction/Data Exploration
