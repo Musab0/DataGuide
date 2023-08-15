@@ -19,5 +19,8 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   Forward
+   Introduction/index
+   Introduction/Types of Data
+   Introduction/The AI-Ml Life Cycle
+   Introduction/Data Exploration
