@@ -51,8 +51,8 @@ Before carrying out any development or deployment of AI applications, it is impo
 
 .. admonition:: Business Goal Definition Phase in a Nutshell
 
-Identify the business purpose of the AI-ML model. Link the purpose with the question to be answered by the AI model. Identify the model type based on the question. 
-Business Goal Definition in Our Running Example: Using a standard technique for management decisions like the goal-question-metrics approach, ACME management can specify the business objectives of the planned AI application as follows. Goal: Decrease the downtime of rotating machines of type A. Question: Is predictive maintenance of type-A equipment before its (estimated) failure time more cost- and downtime-effective than reactive maintenance af- ter breakdown? Metrics: The total cost of operation for type-A equipment. 
+   Identify the business purpose of the AI-ML model. Link the purpose with the question to be answered by the AI model. Identify the model type based on the question. 
+   Business Goal Definition in Our Running Example: Using a standard technique for management decisions like the goal-question-metrics approach, ACME management can specify the business objectives of the planned AI application as follows. Goal: Decrease the downtime of rotating machines of type A. Question: Is predictive maintenance of type-A equipment before its (estimated) failure time more cost- and downtime-effective than reactive maintenance af- ter breakdown? Metrics: The total cost of operation for type-A equipment. 
 
 1.3.3 Data Ingestion
 ~~~~~~~~~~~
@@ -60,8 +60,8 @@ Data ingestion is the AI life cycle stage where data are obtained from multiple 
 
 .. admonition:: Data Collection/Ingestion Phase in a Nutshell
 
-Identify the input data to be collected and the corresponding annotation metadata. Organise ingestion according to the AI application requirements, importing data in a stream, batch or hybrid fashion. 
-Data Collection/Ingestion Definition in Our Running Example: In the fault prediction application for rotating machines, a stream of sensor data must be ingested about the operation of each rotatory (serial number, working conditions [round/ min], input power [kw], input mass [kg], output). Batch ingestion is also needed (usually via a separate database query) for the corresponding context (meta) data: equipment brand, model, serial number, procurement info (supplier, date of construction, date of delivery), installation data (installer, date of 
+   Identify the input data to be collected and the corresponding annotation metadata. Organise ingestion according to the AI application requirements, importing data in a stream, batch or hybrid fashion. 
+   Data Collection/Ingestion Definition in Our Running Example: In the fault prediction application for rotating machines, a stream of sensor data must be ingested about the operation of each rotatory (serial number, working conditions [round/ min], input power [kw], input mass [kg], output). Batch ingestion is also needed (usually via a separate database query) for the corresponding context (meta) data: equipment brand, model, serial number, procurement info (supplier, date of construction, date of delivery), installation data (installer, date of 
 
 
 .. rubric:: Footnotes
