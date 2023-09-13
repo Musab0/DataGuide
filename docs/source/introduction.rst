@@ -68,3 +68,76 @@ Data ingestion is the AI life cycle stage where data are obtained from multiple 
 
 .. [#f2] Besides elementary data types like strings and integers, structured data items can also belong to complex types, like the nested records used for log file entries. 
 .. [#f3] For multimedia data sources, access control rather than being based on filtering may follow a digital rights management approach where some proof-of-hold are negotiated with the data owner’s license servers before ingesting the data. 
+
+1.4 Data Exploration
+-------
+Data exploration is the stage where insights start to be taken from ingested data. While this stage may be skipped in some AI applications where data are well understood, it is often a crucial (and very time-consuming phase) of the AI-ML life cycle. At this stage, it is critical to distinguish between numerical and categorical data. Numerical data lends itself to plotting and allows for computing descriptive statistics and verifying if data fit simple parametric distributions like the Gaussian one. Missing data values can also be detected and handled at the exploration stage. 
+
+.. admonition:: Data Validation/Exploration in a Nutshell
+
+   It is always advisable to plot data after ingestion, to obtain a multidimensional view of all the components of each data vector. Also, it is useful to verify if data fit a known statistics distribution, either by component (monovariate distribution) or as vectors (multivariate distribution), and estimate the corresponding statistic parameters. 
+   Data Validation/Exploration in Our Running Example: ACME data scientists will periodically plot sensed data about multiple pieces of equipment (e.g., the rounds-per-minute and power consumption variables) and fit the data to a bivariate statistical distribution (e.g., a Gaussian or power-log distribution). If the statistical tests confirm data belong to a distribution, they will display the distribution’s parameters, for instance the standard deviation σ, and highlight ‘three-sigma’ outliers (e.g., the machines whose rotation speed values lie outside an interval of three sigmas around the average). 
+
+1.4.1 Data Pre-Processing
+~~~~~~~~~~~
+Data preprocessing can be the most critical stage of the life cycle. At this stage, techniques are employed to clean, integrate and transform the data, resulting in an improved data quality that will save time during the analytic models’ training phase and promote better quality of results. Data cleaning is used to correct inconsistencies, remove noise and anonymise data. Data integration puts together data coming from multiple sources, while data transformation prepares the data for feeding an AI-ML model, typically by encoding it in a numerical format. A typical encoding is one-hot encoding used to represent categorical variables as binary vectors. This encoding first requires categorical values to be mapped to integer values. Then, each integer value is represented as a binary vector that is all zero values except the position of the integer, which is marked with a 1. Figure 4 below shows one-hot encoding of categorical data expressing colours. 
+
+Once converted to numbers, data can be subject to further types of transformation: rescaling, standardisation, normalisation and labelling. Rescaling expresses numerical data in a suitable representation unit (e.g., from tons to kilograms). Standardisation puts data in a standard format, and normalisation maps data to a compact representation interval (e.g., the interval [0, 1], by dividing all values by the maximum). Labelling (done by human experts or by another AI application) associates each data item to a category or a prediction. At the end of this process, a numerical data set is obtained, which will be the basis for training, testing and evaluating the AI model. 
+
+.. admonition:: Data pre-processing in a Nutshell
+
+   Convert ingested data to a metric (numerical) format, integrate data from different sources, handle missing/null values by interpolation, increase density to reduce data sparsity, de-noise, filter out outliers, change representation interval. Anonymize the data. 
+   Data Preprocessing in Our Running Example: After having ingested the sensor data about the rotating machines, the ACME AI-ML application interpolates any missing value about equipment rotation speed and power consumption to achieve a uniform samples/time unit rate. The application integrates sensed data about rotation speed and power with data about external temperature and atmospheric pressure at the same time obtained from an open data service; then, it normalizes the data vectors, and adds to each data vector labels IMMINENT NOTIMMINENT representing the expected time to next failure. Also, it deletes the human operator code from the data to make sure they do not reference personal information. 
+
+1.5 Feature Selection
+-------
+Feature selection is the stage of the life cycle where the number of components of the data vectors (also called features or dimensions) is reduced, by identifying the components that are believed to be the most meaningful for the AI model. The result of this phase is a reduced data set, as each data vector has fewer components than before. Besides the computational cost reduction, feature selection can help in obtaining more accurate models. Additionally, models built on top of lower dimensional data are more understandable and explainable. This stage can also be embedded in the model-building phase, to be discussed in the next section. 
+
+.. admonition:: Feature selection in a Nutshell
+
+   Identify the dimensions of the data set that account for a global parameter (e.g., the overall variance of the labels). Project data set along these dimensions, discarding the others. 
+   Feature Selection in Our Running Example: In the predictive maintenance application, the ACME data scientists project the vectors of the data set on the subset of dimensions that maximises input variance [#f4]_. As inputs are mostly numerical data (like the engines’ power consumption and rotation speed), ACME data scientists use the principal component analysis (PCA) method. If inputs had been categorical, multiple correspondence analysis could have been used to represent categorical data as points in a low-dimensional vector space. 
+
+.. rubric:: Footnotes
+
+.. [#f4]  Besides elementary data types like strings and integers, structured data items can also belong to complex types, like the nested records used for log file entries. 
+
+1.5.1 ML Model Selection
+~~~~~~~~~~~
+This stage performs the selection of the best AI-ML model or algorithm for analysing the ingested and preprocessed data. Finding the ‘right’ AI-ML model to solve a business problem or achieve a business goal is a challenge, often subject to trial and error. Based on the business goal and the type of available data, different types of AI techniques can be used. It is important to remark that model selection may trigger a transformation of the input data, as different AI models require different numerical encoding of the input data vectors. Two major categories are supervised learning and unsupervised learning models, the latter including clustering and reinforcement learning. Supervised techniques deal with labelled data: the AI-ML model is used to learn the mapping between input examples and the target outputs. Supervised models can be designed as classifiers, whose aim is to predict a class label, and regressors, whose aim is to predict a numerical value function of the inputs (e.g., a counter). Unsupervised techniques extract relations from unlabelled training data, with the aim of organising them into groups (clusters, highlighting associations among data, summarising data distribution and reducing data dimensionality [this last already mentioned as a goal of data preparation]). 
+
+Reinforcement learning is typically less data dependent: it maps situations with actions, learning behaviours that will maximise a reward. 
+
+AI-ML models of different types can be composed using composition methods (e.g., by taking the majority of their outputs)[#f5]_. 
+
+.. rubric:: Footnotes
+
+.. [#f5]  Besides elementary data types like strings and integers, structured data items can also belong to complex types, like the nested records used for log file entries. 
+
+.. admonition:: AI Model Selection in a Nutshell
+
+   Choose the type of AI model most suitable for the application. Encode the data input vectors to match the model’s preferred input format. 
+   AI Model Selection in Our Running Example: For associating an IMMINENT or NOT-IMMINENT label to each data vector about the type-A rotating machines, ACME data scientists choose a multidimensional, supervised AI model with memory, as they realise that fault events depend on the history of each piece of equipment and not only on the current values of the input. They choose a two-dimensional long short-term recurrent neural network (2D RNN). They compute one-hot encoding of the categorical inputs and map the input data vectors (dimension n) into 2D tensors (i.e., bi-dimensional matrices with dimensions h, k and h + k = n). 
+
+1.5.2 Model Training
+~~~~~~~~~~~
+When the selected AI analytic is an ML model, the latter must go through a training phase, where internal model parameters like weights and bias are learned from data. The training phase will feed the ML model with batches of input vectors and will use a learning function to adapt the model’s internal parameters (weights and bias) based on a linear or quadratic measure of the difference between the model’s output and the labels. Often, the available data set is partitioned at this stage into a training set, used for setting the model’s parameters, and a test set, where error is only recorded in order to assess the model’s performance outside the training set. Cross-validation schemes randomly partition the data set multiple times into a training and a test portion of fixed sizes (e.g., 80% and 20% of the available data) and then repeat training and validation phases on each partition. 
+
+.. admonition:: AI Model Training in a Nutshell
+
+   Select and apply a training algorithm to modify the chosen model according to training data. Validate the model training on test set according to a cross-validation strategy. 
+   AI Model Training in Our Running Example: Train the 2D RNN model for type-A equipment failure prediction via a small batch gradient descent algorithm with L2 loss function on the training set. Use the 80-20 cross-validation strategy. 
+
+1.5.3 Model Tuning
+~~~~~~~~~~~
+Certain mathematical parameters define the high-level behaviour of ML models during training, such as the learning function or modality mentioned above. It is important to know that these parameters, often called hyperparameters, cannot be learned from input data. They need to be set up manually, although they can sometimes be tuned automatically by searching the model parameters’ space, in practice by repeatedly training the model, each time with a different value of hyperparameters. This procedure is called hyperparameter optimisation. It is often performed using classic optimisation techniques like grid search, but random search and Bayesian optimisation can also be used. 
+
+For the purposes of this document, it is only important to remark that the model tuning stage uses a special data asset (often called a validation set), which is distinct from the training and test sets we described in the previous stages. Also, it is useful to know that a final evaluation phase (after tuning) is sometimes carried out to estimate how the tuned model would behave in extreme conditions, for example, when fed with wrong/unsafe data sets. The extreme data used for the latter procedure is called held-out data. 
+
+.. admonition:: AI Model Tuning in a Nutshell
+
+   Apply model adaptation to the hyperparameters of the trained AI model using a validation data set, according to deployment condition. 
+   AI Model Tuning in Our Running Example: ACME data scientists run the 2D RNN model they trained for fault prediction on an additional validation data set and choose the best values h and k for the RNN’s tensor dimensions. Then they es- timate how the tuned model would behave in extreme conditions by running the model on some held-out data corresponding to extreme rotation speed values.
+
+1.5.4 Transfer Learning
+~~~~~~~~~~~
