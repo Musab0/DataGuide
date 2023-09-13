@@ -49,7 +49,7 @@ The ACME oil field services company wants to prevent the failure of its mechanic
 ~~~~~~~~~~~
 Before carrying out any development or deployment of AI applications, it is important that all stakeholders fully understand the business context of the AI application and the data required to achieve the AI application’s business goals, as well as the business metrics to be used to assess the degree to which these goals have been achieved. 
 
-.. admonition:: Business Goal Definition Phase in a Nutshell:
+.. admonition:: Business Goal Definition Phase in a Nutshell
 
 Identify the business purpose of the AI-ML model. Link the purpose with the question to be answered by the AI model. Identify the model type based on the question. 
 Business Goal Definition in Our Running Example: Using a standard technique for management decisions like the goal-question-metrics approach, ACME management can specify the business objectives of the planned AI application as follows. Goal: Decrease the downtime of rotating machines of type A. Question: Is predictive maintenance of type-A equipment before its (estimated) failure time more cost- and downtime-effective than reactive maintenance af- ter breakdown? Metrics: The total cost of operation for type-A equipment. 
@@ -58,7 +58,7 @@ Business Goal Definition in Our Running Example: Using a standard technique for 
 ~~~~~~~~~~~
 Data ingestion is the AI life cycle stage where data are obtained from multiple sources to compose data records, for immediate use or for storage in order to be accessed and used later. Data ingestion lies at the basis of all AI applications. Data can be ingested directly from their sources as they are generated (streaming) or via periodically importing blocks of data called batches. Indeed, stream and batch data ingestion can be active in the same AI application simultaneously. For example, the licence plates of cars entering a parking lot can be ingested one by one to check them against a stolen cars database, while batches of the same data are collected periodically for computing the parking lot’s average occupancy. An important data management procedure performed at ingestion time is data filtering or access control. This procedure selects data to be ingested, depending on their privacy status (personal/non-personal data, consent given for a given purpose, etc.). We will deal with these issues in detail in Sect. 1.7. For now, we only remark that it is good practice at ingestion time to apply some anonymity preservation techniques, taking into account the achievable trade-off between the impact of potential disclosure and the accuracy of the analysis to be computed on the data [#f3]_. 
 
-.. admonition:: Data Collection/Ingestion Phase in a Nutshell:
+.. admonition:: Data Collection/Ingestion Phase in a Nutshell
 
 Identify the input data to be collected and the corresponding annotation metadata. Organise ingestion according to the AI application requirements, importing data in a stream, batch or hybrid fashion. 
 Data Collection/Ingestion Definition in Our Running Example: In the fault prediction application for rotating machines, a stream of sensor data must be ingested about the operation of each rotatory (serial number, working conditions [round/ min], input power [kw], input mass [kg], output). Batch ingestion is also needed (usually via a separate database query) for the corresponding context (meta) data: equipment brand, model, serial number, procurement info (supplier, date of construction, date of delivery), installation data (installer, date of 
