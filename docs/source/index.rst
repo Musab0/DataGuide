@@ -33,6 +33,11 @@ Contents
 .. toctree::
 
    forward
+
+.. toctree::
+   :caption: Introduction
+   :maxdepth: 1
+
    introduction
    introduction/Types of Data
    introduction/The AI-Ml Life Cycle
