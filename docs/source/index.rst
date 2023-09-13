@@ -14,6 +14,19 @@ how to :ref:`installation` the project.
 
    This project is under active development.
 
+   Data Ingestion/Sources of Data
+   Data Ingestion/Data Collection\/Ingestion
+   Data Ingestion/Data Storage
+   Data Ingestion/Data Representation Standards
+   Data Ingestion/Representation Standards for Web Data
+   Data Ingestion/Data Representation in Key Vertical Domains
+   Data Ingestion/Data Representation for Bioinformatics
+   Data Ingestion/Data Representation for Smart Cities
+   Data Ingestion/AI Data Storage
+   Data Ingestion/Data Representation for Intelligent Manufacturing
+   Data Ingestion/Recommendations
+   Data Ingestion/Big Data Systems
+
 Contents
 --------
 
@@ -33,19 +46,8 @@ Contents
    :caption: Data Ingestion
    :maxdepth: 1
 
-   Data Ingestion
-   Data Ingestion/Sources of Data
-   Data Ingestion/Data Collection\/Ingestion
-   Data Ingestion/Data Storage
-   Data Ingestion/Data Representation Standards
-   Data Ingestion/Representation Standards for Web Data
-   Data Ingestion/Data Representation in Key Vertical Domains
-   Data Ingestion/Data Representation for Bioinformatics
-   Data Ingestion/Data Representation for Smart Cities
-   Data Ingestion/AI Data Storage
-   Data Ingestion/Data Representation for Intelligent Manufacturing
-   Data Ingestion/Recommendations
-   Data Ingestion/Big Data Systems
+   data-ingestion
+
 
    
 
