@@ -31,9 +31,9 @@ Contents
 --------
 
 .. toctree::
-   :caption: Introduction
 
-   introdcution
-   introdcution/types-of-data
-   introdcution/the-AI-Ml-life-cycle
-   introdcution/data-exploration
+   Forward
+   Introduction
+   Introduction/Types of Data
+   Introduction/The AI-Ml Life Cycle
+   Introduction/Data Exploration
