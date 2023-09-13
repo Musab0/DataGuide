@@ -32,7 +32,7 @@ Contents
 
 .. toctree::
 
-   Forward
+   forward
    introduction
    introduction/Types of Data
    introduction/The AI-Ml Life Cycle
