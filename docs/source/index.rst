@@ -20,24 +20,24 @@ Contents
 .. toctree::
 
    Forward
-   INTRODUCTION
-   INTRODUCTION/Types of Data
-   INTRODUCTION/The AI-Ml Life Cycle
-   INTRODUCTION/Data Exploration
+   Introdcution
+   Introdcution/Types of Data
+   Introdcution/The AI-Ml Life Cycle
+   Introdcution/Data Exploration
 
-   DATA INGESTION
-   DATA INGESTION/Sources of Data
-   DATA INGESTION/Data Collection\/Ingestion
-   DATA INGESTION/Data Storage
-   DATA INGESTION/Data Representation Standards
-   DATA INGESTION/Representation Standards for Web Data
-   DATA INGESTION/Data Representation in Key Vertical Domains
-   DATA INGESTION/Data Representation for Bioinformatics
-   DATA INGESTION/Data Representation for Smart Cities
-   DATA INGESTION/AI Data Storage
-   DATA INGESTION/Data Representation for Intelligent Manufacturing
-   DATA INGESTION/Recommendations
-   DATA INGESTION/Big Data Systems
+   Data Ingestion
+   Data Ingestion/Sources of Data
+   Data Ingestion/Data Collection\/Ingestion
+   Data Ingestion/Data Storage
+   Data Ingestion/Data Representation Standards
+   Data Ingestion/Representation Standards for Web Data
+   Data Ingestion/Data Representation in Key Vertical Domains
+   Data Ingestion/Data Representation for Bioinformatics
+   Data Ingestion/Data Representation for Smart Cities
+   Data Ingestion/AI Data Storage
+   Data Ingestion/Data Representation for Intelligent Manufacturing
+   Data Ingestion/Recommendations
+   Data Ingestion/Big Data Systems
 
    
 
