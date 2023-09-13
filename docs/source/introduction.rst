@@ -141,3 +141,62 @@ For the purposes of this document, it is only important to remark that the model
 
 1.5.4 Transfer Learning
 ~~~~~~~~~~~
+The transfer learning (TL) phase, once relatively rare, has become very frequent as the market of AI services has expanded. It happens when the user organisation, rather than training a model from scratch, sources a pretrained and pretuned AI-ML model, and uses it as starting point for further training to achieve faster and better convergence. 
+
+.. admonition:: TL in a Nutshell
+
+   Source a pretrained model in the same domain and apply additional training to improve in-production accuracy. 
+   TL in Our Running Example: ACME data scientists look for the opportunities of sourcing a predictor for the expected time to next failure from the manufacturer of type-A rotating machines. They get a 2D RNN model, which was trained by the equipment manufacturer on lab data. They know that RNN are not usually transfer learned [#f6]_ , but they decide to apply an RNN-specific TL technique (e.g., Stephen Merity’s TL) to their failure time predictor. 
+
+.. rubric:: Footnotes
+
+.. [#f6]  Not all ML models are equally transferable. In the case of RNNs, TL is an RNN-specific. 
+
+1.6 Model Deployment
+-------
+An ML model will bring knowledge to an organisation only when its predictions become available to the users. Deployment is the process of taking a pretrained ML model and making it available to users. 
+
+Model Deployment in a Nutshell: Generate an in-production incarnation of the model as software, firmware or hardware. Deploy the model incarnation to edge or cloud, connecting in-production data flows. 
+
+Model Deployment in Our Running Example: ACME management decides to compile the failure time prediction model as firmware on the rotating machines’ controller cards. This way they can upgrade the centrifuges by installing an enhanced controller and connecting it to the local data streams. 
+
+1.6.1 Model Maintenance
+~~~~~~~~~~~
+Similar to software systems, ML models also require continuous maintenance. After deployment, AI models need to be continuously monitored and maintained to handle concept changes and concept drifts. A change of concept happens when the meaning of an input (or of an output label) changes for the model (e.g., due to modified regulations). A concept drift occurs when the change is not drastic but, rather, emerges slowly. Drift is often due to sensor encrustment, or the slow evolution over time in sensor resolution (i.e., the smallest detectable difference between two values), or overall representation interval. A popular strategy to handle model maintenance is window-based relearning, which relies on recent data points to build an ML model. Another useful technique for AI model maintenance is backtesting. In most cases, the user organisation knows what happened in the aftermath of the AI model adoption and can compare model prediction to reality. This highlights concept changes: if an underlying concept switches, organisations see a decrease in performance. 
+
+.. admonition:: Model Maintenance in a Nutshell
+
+   Monitor the ML inference results of the deployed AI model to detect possible concept changes or drifts. Retrain the model when needed. 
+   Model Maintenance in Our Running Example: After ACME has installed its ML- based maintenance models, it revises the label IMMINENT to IN THE NEXT FIVE MINUTES. Also, the rotation speed sensor on the machine board encrusts every year: sensors older than a year can no longer measure rotation speeds higher than 1000 rpm. ACME data scientists advise immediate retraining to handle concept change and a yearly retraining to handle sensor encrustment. 
+
+1.6.2 Business Understanding
+~~~~~~~~~~~
+Building an AI model is often expensive and always time-consuming. It poses several business risks, including failing to have a meaningful impact on the user organisation as well as missing in-production deadlines after completion. Business understanding is the stage at which companies that deploy AI models gain insight on the impact of AI on their business and try to maximise the probability of success. 
+
+Business Understanding in a Nutshell: Assess the value proposition of the deployed AI model. Estimate (before deployment) and verify (after deployment) its business impact. 
+
+Business Understanding in Our Running Example: ACME management measures, in a six-month verification procedure, the cost of operation for the rotating machines that include the AI controller as well as the ones that do not. The ACME Board estimates the related business opportunities in terms of service and product innovation and decides to start a product line. 
+
+1.7 Regulatory Issues of Data Managment 
+~~~~~~~~~~~
+Data management practices and the AI-ML life cycle presented above are tightly connected. AI-ML models require large volumes of information to learn from, even potentially including personal data. As a result, national and international regulatory issues need to be considered when planning the deployment of AI-ML models performing automated decision-making on individuals based on their personal data, without any human intervention. By personal data, we mean any data that can be linked directly or indirectly to a user’s identity. This is a critical scenario which was intentionally not covered in our running example, where data about the engines’ operators were not used to train the AI-ML system. Still, personal data are present in many AI-ML applications: for instance, an AI-ML model could analyse a user’s credit card history to compute the user’s credit score. Using personal data in the AI-ML model life cycle is a key regulatory issue worldwide. The European General Directive on Privacy’s Article 22 specifies that each person has the right not to be subject to automatic decision-making if it might result in legal action concerning them. In this section, we briefly recall four key principles that AI- ML models are expected to support: purpose limitation, data minimisation, fairness, transparency and the right to information. These properties will be connected to AI-ML systems operation in the remainder of this document. 
+
+* Purpose limitation: The purpose limitation principle states that personal data cannot be used to train AI-ML models other than the ones the data owners have been informed about. This is a critical property, as some AI-ML systems rely on information that is a side product of the original data collection. For instance, an AI-ML Fintech application can use social media data about users (the number of their social network followers) for computing their credit score. The principle of purpose limitation says this secondary use should not be allowed, unless the users had been informed of this side use when they joined the social network. Of course, there are exceptions: secondary data processing is admissible for medical or statistical research. 
+
+* Data minimisation: The data minimization principle ensures that data collected to train an AI-ML model is adequate and relevant to the model’s purpose, without unnecessary redundancy. AI experts have to determine what data and what quantity of it is necessary for the project. As we will see, it is not always possible to predict how and what a model will learn from data. Organizations deploying AI-ML models should continuously verify they are using a minimum quantity of training data needed for their models to operate. 
+
+* Fairness: The principle of fairness states that the use of the AI-ML system should not result in unfair discrimination against individuals, communities, or groups. The initial data used to train the AI-ML models must be free from bias or characteristics which may cause the models to behave unfairly. 
+
+* Transparency: This principle states that owners of personal data should know which of their information is used by AI-Ml models. Organizations deploying AI-ML should be prepared to provide a detailed description of what they are doing with personal data to data owners. 
+
+* Right to information. This principle states that everyone has the right to seek, receive, use, and impart information held by or on behalf of public authorities, or to which public authorities are entitled by law to have access. This applies to AI-ML models that are deployed by authorities to service the community. 
+
+Organisations wishing to deploy AI-ML models are expected to find a way to design and use them in a way that is compliant with the above principles, because they will generate value for both service providers and data sub-jects if done correctly. 
+
+1.8 Summary
+-------
+In this chapter, we provided an overview of some AI-ML techniques, focus- ing on the stages of the AI models’ life cycle that require or generate data assets which need attention from the data management point of view. We also reviewed some principles that need to be addressed when managing data assets in the AI-ML life cycle. Figure 1.8 shows these data assets, while Table 1 maps the data assets to the stage of the ML life cycle where they are used or generated.
+
+In the next chapter, we will examine each stage of the AI-ML life cycle in detail to identify and discuss the data management issues of the corre- sponding data assets.
+
+
