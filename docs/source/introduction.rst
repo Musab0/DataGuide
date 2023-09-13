@@ -21,7 +21,7 @@ For both data categories, we can distinguish between numerical and categorical a
 
 .. rubric:: Footnotes
 
-.. [#f1] Text of the first footnote.
+.. [#f1]  Besides elementary data types like strings and integers, structured data items can also belong to complex types, like the nested records used for log file entries. 
 
 1.2	DATA QUALITY
 ---------
