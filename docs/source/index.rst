@@ -24,7 +24,6 @@ Contents
    Introdcution/Types of Data
    Introdcution/The AI-Ml Life Cycle
    Introdcution/Data Exploration
-
    Data Ingestion
    Data Ingestion/Sources of Data
    Data Ingestion/Data Collection\/Ingestion
