@@ -31,24 +31,9 @@ Contents
 --------
 
 .. toctree::
-
-   forward
-
-.. toctree::
    :caption: Introduction
-   :maxdepth: 1
 
    introdcution
    introdcution/types-of-data
    introdcution/the-AI-Ml-life-cycle
    introdcution/data-exploration
-
-.. toctree::
-   :caption: Data Ingestion
-   :maxdepth: 1
-
-   data-ingestion
-
-
-   
-
