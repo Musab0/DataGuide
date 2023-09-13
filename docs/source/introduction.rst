@@ -108,7 +108,7 @@ This stage performs the selection of the best AI-ML model or algorithm for analy
 
 Reinforcement learning is typically less data dependent: it maps situations with actions, learning behaviours that will maximise a reward. 
 
-AI-ML models of different types can be composed using composition methods (e.g., by taking the majority of their outputs)[#f5]_ . 
+AI-ML models of different types can be composed using composition methods (e.g., by taking the majority of their outputs) [#f5]_ . 
 
 .. rubric:: Footnotes
 
