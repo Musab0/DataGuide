@@ -31,7 +31,8 @@ Contents
 --------
 
 .. toctree::
-   Forward
+
+   forward
 
 .. toctree::
    :caption: Introduction
