@@ -48,3 +48,45 @@ Contents
    :maxdepth: 2
 
    data-ingestion
+
+.. toctree::
+   :caption: DATA EXPLORATION
+   :maxdepth: 2
+
+   data-exploration
+
+.. toctree::
+   :caption: DATA PREPROCESSING
+   :maxdepth: 2
+
+   data-preprocessing
+
+.. toctree::
+   :caption: MODEL TRAINING
+   :maxdepth: 2
+
+   model-training
+
+.. toctree::
+   :caption: PARAMETERS FOR MODEL TUNING
+   :maxdepth: 2
+
+   parameters-for-model-tuning
+
+.. toctree::
+   :caption: MODEL ADAPTATION, DEPLOYMENT AND MAINTENANCE
+   :maxdepth: 2
+
+   model-adaption-deployment-and-maintenance
+
+.. toctree::
+   :caption: CASE STUDIES
+   :maxdepth: 2
+
+   case-studies
+
+.. toctree::
+   :caption: OTHER AI TECHNIQUES
+   :maxdepth: 2
+
+   other-ai-techniques
