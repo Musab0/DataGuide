@@ -46,7 +46,6 @@ This section describes some of the available standards for data management from 
 
 2.4 AI Data Storage
 -------
-
 ML and deep learning rely heavily on the availability of massive data for training purposes. For all AI applications, it is critical to have a standard data infrastructure (AI storage) that is scalable and can apply the FAIR data principles (findable, accessible, interoperable, and reusable) among heterogeneous data sets from various domains. Data storage for AI aims to host or collect quality data of different types and from multiple sources to create an integrated data storage. The purpose of AI data storage is also to set up an environment where AI model designers can easily judge, collect and utilise data. Besides data providers and users, AI storage may also have interfaces for other players, including data distributors that provide mediation between data providers and users. 
 
 By making data representations interoperable in the data storage layer, data scientists and other users can focus on the substance of the AI problem they are trying to solve. This allows them to quickly unlock insights and benefits from data analysis. Besides interoperability, a major goal of data representation is protecting data confidentiality and personal privacy. A technology roadmap for AI data governance and management is therefore critical to any enterprise or organisation wishing to adopt AI. The road map needs to express the overall direction of how to manage data generated from the organisation’s products and services. 
@@ -83,7 +82,6 @@ The main problem with this format is that it does not have a specific encoding (
 
 2.4.2 AI File Formats
 ~~~~~~~~~~~
-
 The data, used by the algorithms, are saved on files with a structure that depends on the data type. The simplest data format is comma-separated values (CSV), a text file in which: 
 
 *	records are separated by a new line, and 
@@ -141,16 +139,13 @@ Other ISO standards relevant to AI data representation include the following:
 
 2.5.2 ISO Work Groups and Activities on Data Governance
 ~~~~~~~~~~~~~
-
 ISO/IEC JTC 1/SC 40, titled ‘IT Service Management and IT Governance’, currently WG1 on Governance Standards, leads the development of standards, tools, frameworks, best practices and related documents on the governance of information technology. Relevant standards potentially beneficial to AI include the following: 
 
 *	ISO/IEC 38505-1:2017, Part 1: Application of ISO/IEC 38500 to the Governance of Data – Applies to governance of the current and future use of data that is created, collected, stored or controlled by IT systems, affects the management processes and decisions relating to data 
 *	ISO/IEC 38505-2, Part 2: Implications of ISO/IEC 38505-1 for Data Management – Identifies the information that a governing body requires to evaluate and direct the strategies and policies relating to a data-driven business and the capabilities and potential of measurement systems that can be used to monitor data performance and uses. 
 
-
 2.6 Representation Standards for Web Data
 -------
-
 Web data are at the core of many AI applications revolving around users’ behaviour in cyberspace. Next, we touch upon some of the most well-known representations of the data and metadata designed specifically for web data. 
 
 2.6.1 The Dublin Core
@@ -176,8 +171,6 @@ The Consultative Committee for Space Data Systems (CCSDS) was formed in 1982 wit
 
 * ISO 16363, Audit and Certification of Trustworthy Digital Repositories (TDR). The OAIS Reference Model is adopted by many ‘OAIS- compliant’ digital repositories. At the time ISO 14721 was first developed, there was no standard to assess compliance with the reference model. ISO 16363 was developed to fill that gap. In addition to providing for the audit and certification of TDRs, the standard can serve as a road map for developing the policies, procedures, staffing and infrastructure for setting up a TDR that is compliant with the OAIS Reference Model. 
 
-
-
 2.8 Data Representation for Bioinformatics
 -------
 Applied Proteogenomics Learning and Outcomes (APOLLO) aims to correlate all genomic, proteomic and clinical data with imaging data with a focus on precision medicine or targeted medicine. Three major developments were launched. First, in the Precision Oncology Program (POP, March 2015), the US Department of Veterans Affairs (VA) program focused initially on lung cancer. It was designed to seamlessly merge traditional clinical activities with a systematic approach to exploiting potential breakthroughs in genomic medicine and generating credible evidence in real world settings and in real time. The second program, Apollo (July 2016), was inspired by Moonshot, where a coalition was formed between the US-VA, the US Department of Defense and the US National Cancer Institute to help cancer patients by enabling their oncologist to more rapidly and accurately identify drug treatments based on the patient’s unique proteomic profile. The third program was Research POP (RePOP, July 2016), the research arm of POP, consisting of veterans who agreed to share their medical records (clinical, imaging, genomic, etc.) within and outside the VA for the purpose of finding the cure for cancer. The Veterans Health Administration consists of 8,000,000 veterans, 160 VAMC, 800 clinics, 135 nursing homes. It also has the backbone operational infrastructure of the Veterans Information Systems and Technology Architecture (VistA). 
@@ -201,7 +194,6 @@ Supporting diversified representations for AI data assets is essential for organ
 
 2.12 Big Data Systems
 -------
-
 Data storage requirements for AI vary widely according to the application. Medical data, as well as imaging data sets used in military applications, frequently combine petabyte-scale storage size with individual files in the gigabyte range. Numerical data used in industrial areas such as maintenance, like the running example in the previous chapter, are often much smaller. 
 
 One of the key requirements of big data storage systems is to handle very large amounts of data and maintain the rates of high input/output operations per second (IOPS) needed to feed some AI-ML models. Indeed, these requirements are incompatible with traditional file system organisation based on files and folders. 
