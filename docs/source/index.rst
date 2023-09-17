@@ -28,7 +28,7 @@ how to :ref:`installation` the project.
    Data Ingestion/Big Data Systems
 
 Contents
---------
+======
 
 .. toctree::
 
