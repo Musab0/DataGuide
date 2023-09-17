@@ -13,20 +13,20 @@ www.ai.gov.ae
 
 Authors: 
 ------------
-Dr. Abdelrahman AlMahmoud 
-Ahmad AlRubaie
-Dr. Ahmed AlDhanhani
-Dr. Anis Ouali
-Dr. Di Wang
-Dr. Dymitr Ruta
-Prof. Ernesto Damiani 
-Dr. Kin Poon
-Maryam AlShehhi 
-Maurizio Colombo 
-Musab Al Hammadi 
-Nathan Eden
-Dr. Rasool Asal
-Dr. Siddhartha Shakya
+* Dr. Abdelrahman AlMahmoud 
+* Ahmad AlRubaie
+* Dr. Ahmed AlDhanhani
+* Dr. Anis Ouali
+* Dr. Di Wang
+* Dr. Dymitr Ruta
+* Prof. Ernesto Damiani 
+* Dr. Kin Poon
+* Maryam AlShehhi 
+* Maurizio Colombo 
+* Musab Al Hammadi 
+* Nathan Eden
+* Dr. Rasool Asal
+* Dr. Siddhartha Shakya
 
 
 
