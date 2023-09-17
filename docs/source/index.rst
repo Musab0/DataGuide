@@ -35,7 +35,7 @@ Contents
    forward
 
 .. toctree::
-   :caption: INTRODUCTION
+   :caption: Chapter 1
    :maxdepth: 2
 
    introduction
@@ -44,49 +44,49 @@ Contents
    introduction/Data Exploration
 
 .. toctree::
-   :caption: DATA INGESTION
+   :caption: Chapter 2
    :maxdepth: 2
 
    data-ingestion
 
 .. toctree::
-   :caption: DATA EXPLORATION
+   :caption: Chapter 3
    :maxdepth: 2
 
    data-exploration
 
 .. toctree::
-   :caption: DATA PREPROCESSING
+   :caption: Chapter 4
    :maxdepth: 2
 
    data-preprocessing
 
 .. toctree::
-   :caption: MODEL TRAINING
+   :caption: Chapter 5
    :maxdepth: 2
 
    model-training
 
 .. toctree::
-   :caption: PARAMETERS FOR MODEL TUNING
+   :caption: Chapter 6
    :maxdepth: 2
 
    parameters-for-model-tuning
 
 .. toctree::
-   :caption: MODEL ADAPTATION, DEPLOYMENT AND MAINTENANCE
+   :caption: Chapter 7
    :maxdepth: 2
 
    model-adaption-deployment-and-maintenance
 
 .. toctree::
-   :caption: CASE STUDIES
+   :caption: Chapter 8
    :maxdepth: 2
 
    case-studies
 
 .. toctree::
-   :caption: OTHER AI TECHNIQUES
+   :caption: Chapter 9
    :maxdepth: 2
 
    other-ai-techniques
