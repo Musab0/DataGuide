@@ -230,5 +230,5 @@ Some file formats for big data are more efficient than regular formats for AI-ML
 
 Other specialised data formats include the following: 
 
-*	Apache Parquet. A columnar data structure, defined by Cloudera and Twitter 
+*	Apache Parquet. A columnar data structure, defined by Cloudera and X 
 *	Apache ORC (Optimized Row Columnar). Defined by Hortonworks and Facebook 
