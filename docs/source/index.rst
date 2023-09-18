@@ -26,6 +26,7 @@ Authors:
 * Musab Al Hammadi 
 * Nathan Eden
 * Dr. Rasool Asal
+* Saqr BinGhalib
 * Dr. Siddhartha Shakya
 
 
