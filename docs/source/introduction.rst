@@ -117,7 +117,7 @@ AI-ML models of different types can be composed using composition methods (e.g.,
 .. admonition:: AI Model Selection in a Nutshell
 
    Choose the type of AI model most suitable for the application. Encode the data input vectors to match the model’s preferred input format. 
-   AI Model Selection in Our Running Example: For associating an IMMINENT or NOT-IMMINENT label to each data vector about the type-A rotating machines, ACME data scientists choose a multidimensional, supervised AI model with memory, as they realise that fault events depend on the history of each piece of equipment and not only on the current values of the input. They choose a two-dimensional long short-term recurrent neural network (2D RNN). They compute one-hot encoding of the categorical inputs and map the input data vectors (dimension n) into 2D tensors (i.e., bi-dimensional matrices with dimensions h, k and h + k = n). 
+   AI Model Selection in Our Running Example: For associating an IMMINENT or NOT-IMMINENT label to each data vector about the type-A rotating machines, ACME data scientists choose a multidimensional, supervised AI model with memory, as they realise that fault events depend on the history of each piece of equipment and not only on the current values of the input. They choose a two-dimensional long short-term recurrent neural network (2D RNN). They compute one-hot encoding of the categorical inputs and map the input data vectors (dimension n) into 2D tensors (i.e., bi-dimensional matrices with dimensions :math:h,k and :math:h+k=n ). 
 
 1.5.2 Model Training
 ~~~~~~~~~~~
