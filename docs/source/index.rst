@@ -1,14 +1,6 @@
 BEST PRACTICES FOR DATA MANAGEMENT ARTIFICIAL INTELLIGENCE APPLICATIONS
 ===================================
 
-test $a^2 + b^2 = c^2$ test
-
-
-test \(a^2 + b^2 = c^2\) test 
-
-
-test :math:`a^2 + b^2 = c^2` test
-
 NATIONAL PROGRAM FOR ARTIFICIAL INTELLIGENCE
 
 www.ai.gov.ae
