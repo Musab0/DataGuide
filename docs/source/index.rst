@@ -29,7 +29,7 @@ Authors:
 * Saqr BinGhalib
 * Dr. Siddhartha Shakya
 
-Math Lib Test :math:`a^2 + b^2 = c^2`
+
 Contents
 ======
 
