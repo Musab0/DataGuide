@@ -5,7 +5,7 @@ There are certain parameters which define high level concepts relating to ML mod
 .. admonition:: Business Goal Definition Phase in a Nutshell
 
    AI Model Tuning in a Nutshell: Apply model adaptation to the hyper parameters of the trained AI model using a validation data set, according to deployment condition. 
-   AI Model Tuning in our Running Example: ACME data scientists run the 2D RNN model trained for fault prediction on an additional validation dataset and choose the best values h, k for the RNN’s tensor dimensions. 
+   AI Model Tuning in our Running Example: ACME data scientists run the 2D RNN model trained for fault prediction on an additional validation dataset and choose the best values :math:`h, k` for the RNN’s tensor dimensions. 
 
 
 6.1 Model Hyper-Parameters
