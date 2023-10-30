@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 419.5 595.3" style="enable-background:new 0 0 419.5 595.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'BodoniSvtyTwoOSITCTT-BookIt';}
+	.st1{font-size:7.6194px;}
+	.st2{font-family:'TimesNewRomanPS-ItalicMT';}
+	.st3{font-size:12px;}
+	.st4{font-size:6.996px;}
+	.st5{font-family:'BodoniSvtyTwoITCTT-Book';}
+	.st6{font-size:9px;}
+	.st7{fill:none;stroke:#15233A;stroke-width:0.25;}
+	.st8{font-size:7.5048px;}
+</style>
+<text transform="matrix(1 0 0 1 184.0259 292.5411)" class="st0 st1"> −</text>
+<text transform="matrix(1 0 0 1 189.4355 291.5431)" class="st0 st1">|z|</text>
+<text transform="matrix(1 0 0 1 200.3848 291.5431)" class="st0 st1"> </text>
+<text transform="matrix(1 0 0 1 190.0298 300.6862)" class="st2 st1">σ</text>
+<text transform="matrix(1 0 0 1 142.0386 301.6578)" class="st0 st3"> p(z)</text>
+<text transform="matrix(1 0 0 1 162.9424 297.6617)" class="st0 st4"> </text>
+<text transform="matrix(1 0 0 1 164.2437 301.6578)" class="st0 st3">= e</text>
+<text transform="matrix(1 0 0 1 264.3213 299.2291)" class="st5 st6">(3)</text>
+<line class="st7" x1="182.4" y1="295.4" x2="202" y2="295.4"/>
+<text transform="matrix(1 0 0 1 205.4233 301.6578)" class="st0 st3">= e</text>
+<text transform="matrix(1 0 0 1 220.0156 297.4005)" class="st0 st8"> </text>
+<text transform="matrix(1 0 0 1 221.4111 298.399)" class="st0 st8">−</text>
+<text transform="matrix(1 0 0 1 225.3438 297.4005)" class="st0 st8">|z|e</text>
+<text transform="matrix(1 0 0 1 238.9805 297.4005)" class="st0 st8"> </text>
+</svg>
