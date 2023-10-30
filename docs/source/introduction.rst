@@ -40,7 +40,7 @@ We are now ready to discuss the different data assets generated and used by AI-M
 
 In this chapter, we provide a short definition of each stage and outline the individual steps it involves (‘Phase in a Nutshell’). For the sake of clarity, we also present an instance of each stage within the framework of a running example concerning a sample AI-ML application. We start by providing a general description of the running example. Then, for each phase of the AI- ML life cycle, we will provide a short description of the phase in the context of our running example (under the title ‘Phase in Our Running Example’). This description should help the reader to understand which data assets are concretely needed at each phase and how they are used. 
 
-.. image:: "./SVG/Best Practices for Data Management In Artificial Intelligence Applications Figures EN_01.svg"
+.. image:: .\\SVG\\Best Practices for Data Management In Artificial Intelligence Applications Figures EN_01.svg
 
 1.3.1 A Running Example for the AI-ML Life cycle
 ~~~~~~~~~~~
