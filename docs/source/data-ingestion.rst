@@ -25,6 +25,9 @@ Additionally, and depending on user requirements, it is possible to collect supp
 2.2.1 Dataprivacyandanonymization
 ~~~~~~~~~~~
 One of the major causes for resistance to data sharing is the risk associated with violating data privacy. Data, in many cases, contains private personal information that should not be made available to the general public, as it might cause harm to the concerned individuals. Simpler approaches such as masking the data might be appealing due to their low complexity. This might include substituting social security numbers with pseudo-random identifiers to hide the private information, as shown in Figure 10. 
+
+.. image:: ./SVG/Figure_EN_10.svg
+
 However, this approach does not translate well to AI-ML applications, as it destroys many of the mathematical properties that are needed. To facilitate joint privacy-preserving analysis, researchers, academics and private companies have put forth a lot of effort to come up with intelligent and advanced privacy-preserving data-sharing schemes. These data-sharing schemes promise to provide the ability for two or more entities to securely and privately share data to carry out collaborative analytics, without revealing any private information to each other. In recent years, these techniques have matured significantly and now come with strong anonymisation guarantees, while enabling more advanced forms of analytics. Currently, there are three main branches that address data anonymisation which are: 
 
 * Homomorphic encryption. A class of encryption algorithms that allow for certain mathematical operations to be carried over encrypted data without the need for decryption 
