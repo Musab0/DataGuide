@@ -9,6 +9,8 @@ Traffic is known to be one of today’s significant issues affecting large citie
 ~~~~~~~~~~~~
 The data used in the case study are at the macroscopic level; they are stored in a data hub which receives sensors’ data from a road section containing multiple lanes going in the same direction (i.e., a road link) and averages the traffic variables for every two minutes. Since the data are aggregated, there are no privacy issues at the individual level. Table 1 shows an example of a reading stored in the data hub. 
 
+.. image:: ./SVG/Table_EN_01.svg
+
 A road link is positioned between two points in the road and has a single direction, clockwise or anti-clockwise, and the distance each road link covers is different. Junctions may contain one or more links, each one covering a short distance, while road links connecting junctions cover a longer distance. 
 
 8.1.2 Data exploration and pre-processing
@@ -24,6 +26,8 @@ Moreover, it is not feasible to use the full data set for training and testing, 
 We remark that events include – besides accidents – slow-downs due to traffic congestion; both start and end times are approximate. 
 
 Regarding the event’s location, the road link that is most affected by the event is chosen. We get this information from the speed values along with the duration of the event. A manual check of all events used for training and testing is also conducted to adjust their timings. We remark again that using the reports without any adjustments could result in inaccurate training and test sets. This problem is commonly encountered in traffic data analysis and has been reported multiple times in the field. 
+
+.. image:: ./SVG/Figure_EN_14.svg
 
 To ease the task of preprocessing the data set, we developed a tool to select the start and end time of an event visually. The tool shows a plot of speed values against time during the targeted period and, if available, a similar plot for road occupancy. 
 
