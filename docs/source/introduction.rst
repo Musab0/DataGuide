@@ -65,6 +65,7 @@ Data ingestion is the AI life cycle stage where data are obtained from multiple 
    Identify the input data to be collected and the corresponding annotation metadata. Organise ingestion according to the AI application requirements, importing data in a stream, batch or hybrid fashion. 
    Data Collection/Ingestion Definition in Our Running Example: In the fault prediction application for rotating machines, a stream of sensor data must be ingested about the operation of each rotatory (serial number, working conditions [round/ min], input power [kw], input mass [kg], output). Batch ingestion is also needed (usually via a separate database query) for the corresponding context (meta) data: equipment brand, model, serial number, procurement info (supplier, date of construction, date of delivery), installation data (installer, date of installation, installation details). ACME chooses an ingestion mechanism that follows a Π architecture.
 
+.. image:: ./SVG/Figure_EN_02.svg
 
 .. rubric:: Footnotes
 
@@ -80,9 +81,13 @@ Data exploration is the stage where insights start to be taken from ingested dat
    It is always advisable to plot data after ingestion, to obtain a multidimensional view of all the components of each data vector. Also, it is useful to verify if data fit a known statistics distribution, either by component (monovariate distribution) or as vectors (multivariate distribution), and estimate the corresponding statistic parameters. 
    Data Validation/Exploration in Our Running Example: ACME data scientists will periodically plot sensed data about multiple pieces of equipment (e.g., the rounds-per-minute and power consumption variables) and fit the data to a bivariate statistical distribution (e.g., a Gaussian or power-log distribution). If the statistical tests confirm data belong to a distribution, they will display the distribution’s parameters, for instance the standard deviation σ, and highlight ‘three-sigma’ outliers (e.g., the machines whose rotation speed values lie outside an interval of three sigmas around the average). 
 
+.. image:: ./SVG/Figure_EN_03.svg
+
 1.4.1 Data Pre-Processing
 ~~~~~~~~~~~
 Data preprocessing can be the most critical stage of the life cycle. At this stage, techniques are employed to clean, integrate and transform the data, resulting in an improved data quality that will save time during the analytic models’ training phase and promote better quality of results. Data cleaning is used to correct inconsistencies, remove noise and anonymise data. Data integration puts together data coming from multiple sources, while data transformation prepares the data for feeding an AI-ML model, typically by encoding it in a numerical format. A typical encoding is one-hot encoding used to represent categorical variables as binary vectors. This encoding first requires categorical values to be mapped to integer values. Then, each integer value is represented as a binary vector that is all zero values except the position of the integer, which is marked with a 1. Figure 4 below shows one-hot encoding of categorical data expressing colours. 
+
+.. image:: ./SVG/Figure_EN_04.svg
 
 Once converted to numbers, data can be subject to further types of transformation: rescaling, standardisation, normalisation and labelling. Rescaling expresses numerical data in a suitable representation unit (e.g., from tons to kilograms). Standardisation puts data in a standard format, and normalisation maps data to a compact representation interval (e.g., the interval [0, 1], by dividing all values by the maximum). Labelling (done by human experts or by another AI application) associates each data item to a category or a prediction. At the end of this process, a numerical data set is obtained, which will be the basis for training, testing and evaluating the AI model. 
 
@@ -90,6 +95,8 @@ Once converted to numbers, data can be subject to further types of transformatio
 
    Convert ingested data to a metric (numerical) format, integrate data from different sources, handle missing/null values by interpolation, increase density to reduce data sparsity, de-noise, filter out outliers, change representation interval. Anonymize the data. 
    Data Preprocessing in Our Running Example: After having ingested the sensor data about the rotating machines, the ACME AI-ML application interpolates any missing value about equipment rotation speed and power consumption to achieve a uniform samples/time unit rate. The application integrates sensed data about rotation speed and power with data about external temperature and atmospheric pressure at the same time obtained from an open data service; then, it normalizes the data vectors, and adds to each data vector labels IMMINENT NOTIMMINENT representing the expected time to next failure. Also, it deletes the human operator code from the data to make sure they do not reference personal information. 
+
+.. image:: ./SVG/Figure_EN_05.svg
 
 1.5 Feature Selection
 -------
@@ -99,6 +106,8 @@ Feature selection is the stage of the life cycle where the number of components 
 
    Identify the dimensions of the data set that account for a global parameter (e.g., the overall variance of the labels). Project data set along these dimensions, discarding the others. 
    Feature Selection in Our Running Example: In the predictive maintenance application, the ACME data scientists project the vectors of the data set on the subset of dimensions that maximises input variance [#f4]_. As inputs are mostly numerical data (like the engines’ power consumption and rotation speed), ACME data scientists use the principal component analysis (PCA) method. If inputs had been categorical, multiple correspondence analysis could have been used to represent categorical data as points in a low-dimensional vector space. 
+
+.. image:: ./SVG/Figure_EN_06.svg
 
 .. rubric:: Footnotes
 
@@ -120,6 +129,8 @@ AI-ML models of different types can be composed using composition methods (e.g.,
 
    Choose the type of AI model most suitable for the application. Encode the data input vectors to match the model’s preferred input format. 
    AI Model Selection in Our Running Example: For associating an IMMINENT or NOT-IMMINENT label to each data vector about the type-A rotating machines, ACME data scientists choose a multidimensional, supervised AI model with memory, as they realise that fault events depend on the history of each piece of equipment and not only on the current values of the input. They choose a two-dimensional long short-term recurrent neural network (2D RNN). They compute one-hot encoding of the categorical inputs and map the input data vectors (dimension n) into 2D tensors (i.e., bi-dimensional matrices with dimensions :math:`h, k` and :math:`h+k=n`). 
+
+.. image:: ./SVG/Figure_EN_07.svg
 
 1.5.2 Model Training
 ~~~~~~~~~~~
@@ -199,6 +210,8 @@ Organisations wishing to deploy AI-ML models are expected to find a way to desig
 -------
 In this chapter, we provided an overview of some AI-ML techniques, focus- ing on the stages of the AI models’ life cycle that require or generate data assets which need attention from the data management point of view. We also reviewed some principles that need to be addressed when managing data assets in the AI-ML life cycle. Figure 1.8 shows these data assets, while Table 1 maps the data assets to the stage of the ML life cycle where they are used or generated.
 
+.. image:: ./SVG/Figure_EN_08.svg
+
 In the next chapter, we will examine each stage of the AI-ML life cycle in detail to identify and discuss the data management issues of the corre- sponding data assets.
 
-
+.. image:: ./SVG/Figure_EN_09.svg
