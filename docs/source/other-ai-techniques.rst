@@ -30,6 +30,8 @@ As we have seen in the previous chapters, data availability is an important fact
 #. Objectives
 #. Constraints 
 
+.. image:: ./SVG/Figure_EN_15.svg
+
 In our example of the logistics business, decision variables define a set of routes that have to be optimised. The two potential objectives are to minimise total travel and maximise delivery volume. And the potential constraints are the capacity of each vehicle and their hours of operation. A clear input data about the domain is crucial to define each of these components. For example, location data about the customers as well as street-level distances are required to specify the routes. Real-time or historical data about traffic and any ongoing construction works could also be useful to calculate the expected travel. 
 
 Finally, data about the vehicles’ size and speed as well as drivers’ roster data are required to calculate the constraints involved in optimising routes. In many real-world scenarios, data are created with the mindset that they will be interpreted by humans, often lacking the required details and rigorous- ness to be processed automatically. To capitalise on the data for AI optimisation, it should be carefully created to enhance the entire decision-making process. 
